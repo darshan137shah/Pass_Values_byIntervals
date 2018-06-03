@@ -32,14 +32,14 @@ function main() {
     }
   }
     // previous button function
-  if(this.id == "previous") {
+  if(this.id == "previous" && in2.value.trim() !== "") {
     checkPre = setInterval(rl, 500);
   } // pause button function
   else if(this.id == "pause") {
     clearInterval(checkPre);
     clearInterval(checkNext);
   } // next button function
-  else if(this.id == "next") {
+  else if(this.id == "next" && in1.value.trim() !== "") {
     if(in1.checkValidity()) {
       checkNext = setInterval(lr, 500);
     }
