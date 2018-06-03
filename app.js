@@ -8,13 +8,11 @@
   btn1.addEventListener('click', main);
   btn2.addEventListener('click', main);
   btn3.addEventListener('click', main);
-
-
   var checkPre;
   var checkNext;
 
 function main() {
-
+  //Executes left-to-right transition
   function lr() {
     if(in1.value) {
       in2.value += in1.value.substr(0, 1);
@@ -24,6 +22,7 @@ function main() {
     }
   }
 
+  //Executes right-to-left transition
   function rl() {
     if(in2.value) {
       in1.value = in2.value.substr(in2.value.length - 1, 1) + in1.value;
@@ -34,18 +33,16 @@ function main() {
   }
     // previous button function
   if(this.id == "previous") {
-    checkPre = setInterval(rl, 1000);
-  }                                                     // pause button function
+    checkPre = setInterval(rl, 500);
+  } // pause button function
   else if(this.id == "pause") {
     clearInterval(checkPre);
     clearInterval(checkNext);
-  }                                                     // next button function
+  } // next button function
   else if(this.id == "next") {
     if(in1.checkValidity()) {
-      checkNext = setInterval(lr, 1000);
+      checkNext = setInterval(lr, 500);
     }
   }
 
 }
-
-// })();
