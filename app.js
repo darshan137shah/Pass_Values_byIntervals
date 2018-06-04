@@ -33,7 +33,7 @@ function main() {
   }
     // previous button function
   if(this.id == "previous" && in2.value.trim() !== "") {
-    checkPre = setInterval(rl, 500);
+    checkPre = setInterval(rl, 1000);
   } // pause button function
   else if(this.id == "pause") {
     clearInterval(checkPre);
@@ -41,7 +41,7 @@ function main() {
   } // next button function
   else if(this.id == "next" && in1.value.trim() !== "") {
     if(in1.checkValidity()) {
-      checkNext = setInterval(lr, 500);
+      checkNext = setInterval(lr, 1000);
     }
   }
 
